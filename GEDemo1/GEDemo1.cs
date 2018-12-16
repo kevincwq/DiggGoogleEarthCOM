@@ -1,10 +1,10 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using EARTHLib;
-using System.IO;
+﻿using EARTHLib;
+using System;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace GEDemo1
 {
@@ -28,13 +28,13 @@ namespace GEDemo1
             try
             {
                 //启动GE
-                GEApp = (ApplicationGEClass)Marshal.GetActiveObject("GoogleEarth.Application");
+                GEApp = (ApplicationGE)Marshal.GetActiveObject("GoogleEarth.ApplicationGE");
 
                 isGEStarted = true;
             }
-            catch
+            catch (Exception e)
             {
-                GEApp = new ApplicationGEClass();
+                GEApp = new ApplicationGE();
 
                 isGEStarted = true;
             }
@@ -47,7 +47,7 @@ namespace GEDemo1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ssFile = Path.Combine(Application.StartupPath, System.DateTime.Now.ToString("GES_yyyyMMddHHmmss")+".jpg");
+            ssFile = Path.Combine(Application.StartupPath, System.DateTime.Now.ToString("GES_yyyyMMddHHmmss") + ".jpg");
 
             try
             {
@@ -76,6 +76,6 @@ namespace GEDemo1
             this.Close();
             Application.Exit();
         }
-    
+
     }
 }

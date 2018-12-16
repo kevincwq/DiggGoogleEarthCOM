@@ -1,9 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using EARTHLib;
+using System;
 using System.ComponentModel;
-using EARTHLib;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 
 namespace GEDemo3

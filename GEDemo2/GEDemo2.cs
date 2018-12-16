@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using EARTHLib;
+using System;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using EARTHLib;
 
 namespace GEDemo2
 {
@@ -30,6 +26,7 @@ namespace GEDemo2
             GEApp = new ApplicationGE();
 
             GEHMainWnd = (IntPtr)GEApp.GetMainHwnd();
+
             //隐藏GoogleEarth主窗口
             NativeMethods.SetWindowPos(GEHMainWnd, NativeMethods.HWND_BOTTOM,
                 0, 0, 0, 0,
